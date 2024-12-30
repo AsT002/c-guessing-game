@@ -1,0 +1,2 @@
+# c-guessing-game
+A basic CLI guessing game in C. Guess a random number within a chosen range and get hints until you succeed. Includes a Makefile and Dockerfile for easy setup. Configure the range at runtime and enjoy multiple rounds of quick gameplay!
