@@ -87,9 +87,21 @@ int main(int argc, char **argv)
             char answer = '\0';
             fscanf(stdin, " %c", &answer); // Read the user's response
 
-            // If user chooses 'Y' or 'y', start a new round
+            // If user chooses 'Y' or 'y', ask to update range and start a new round,
             if (answer == 'Y' || answer == 'y')
             {
+                // Ask the user if they'd like to update the range
+                printf("Would you like to update the range? (Y/N): ");
+                char answer2 = '\0';
+                fscanf(stdin, " %c", &answer2); // Read the user's response
+
+                // If the user chooses 'Y' or 'y', ask what to update the range to.
+                if (answer2 == 'Y' || answer == 'y')
+                {
+                    printf("Give new range: ");
+                    fscanf(stdin, " %ld", &range);           // Read the user's input
+                    printf("Range updated to %ld\n", range); // Display to user that the range has been updated to desired value.
+                }
                 printf("Let's begin another round!\n");
             }
             else
